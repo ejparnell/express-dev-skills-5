@@ -10,8 +10,15 @@
     <form action="/skills/<%= s.id %>?_method=DELETE" method="POST">
       <button type="submit">x</button>
   </form>
+    <!-- Here the link is not showing because our `skill` object does not have a key of `skill`
+    For this we can just move the `s.name` to where the `s.skill` is and our link will be there -->
     <a href="/skills/<%= s.id %>"> <%= s.skill %> </a>
      <%= s.name %> - <%= s.description %> - <%= s.level %>
+
+    <!-- <a href="/skills/<%= s.id %>">
+      <%= s.name %>
+    </a>
+    - <%= s.description %> - <%= s.level %> -->
   </li>
   <% }); %>
 </ul>

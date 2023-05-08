@@ -37,7 +37,8 @@ function deleteSkill(req, res) {
 
 function update(req, res) {
     Skill.update(req.params.id, req.body);
-    res.redirect("/skill");
+    // Missing an `s` here
+    res.redirect("/skills");
 }
 
 module.exports = {
